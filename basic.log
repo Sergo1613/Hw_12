@@ -1,0 +1,74 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:Главная страница запрошена
+INFO:werkzeug:127.0.0.1 - - [26/Aug/2022 15:28:00] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Aug/2022 15:28:00] "GET /static/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Aug/2022 15:28:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:root:Страница найденных постов запрошена
+INFO:werkzeug:127.0.0.1 - - [26/Aug/2022 15:28:05] "GET /search?s=кот HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Aug/2022 15:28:05] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Главная страница запрошена
+INFO:werkzeug:127.0.0.1 - - [26/Aug/2022 15:28:15] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Aug/2022 15:28:15] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Главная страница запрошена
+INFO:werkzeug:127.0.0.1 - - [26/Aug/2022 15:28:32] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Aug/2022 15:28:32] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Страница найденных постов запрошена
+INFO:werkzeug:127.0.0.1 - - [26/Aug/2022 15:28:36] "GET /search?s=море HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Aug/2022 15:28:36] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Главная страница запрошена
+INFO:werkzeug:127.0.0.1 - - [26/Aug/2022 15:28:38] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Aug/2022 15:28:38] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Главная страница запрошена
+INFO:werkzeug:127.0.0.1 - - [26/Aug/2022 15:29:20] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Aug/2022 15:29:20] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Страница найденных постов запрошена
+ERROR:app:Exception on /search [GET]
+Traceback (most recent call last):
+  File "C:\Users\user\Desktop\Hw_12\venv\lib\site-packages\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\user\Desktop\Hw_12\venv\lib\site-packages\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\user\Desktop\Hw_12\venv\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\user\Desktop\Hw_12\venv\lib\site-packages\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "C:\Users\user\Desktop\Hw_12\app.py", line 30, in page_tag
+    return find_posts()
+  File "C:\Users\user\Desktop\Hw_12\functions.py", line 64, in find_posts
+    s = request.args.get("s").lower()
+AttributeError: 'NoneType' object has no attribute 'lower'
+INFO:werkzeug:127.0.0.1 - - [26/Aug/2022 15:29:29] "[35m[1mGET /search HTTP/1.1[0m" 500 -
+INFO:root:Главная страница запрошена
+INFO:werkzeug:127.0.0.1 - - [26/Aug/2022 15:29:34] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Aug/2022 15:29:34] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Страница найденных постов запрошена
+INFO:werkzeug:127.0.0.1 - - [26/Aug/2022 15:29:40] "GET /search?s=собака HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Aug/2022 15:29:40] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Главная страница запрошена
+INFO:werkzeug:127.0.0.1 - - [26/Aug/2022 15:29:42] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Aug/2022 15:29:42] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Страница найденных постов запрошена
+INFO:werkzeug:127.0.0.1 - - [26/Aug/2022 15:29:45] "GET /search?s=кот HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Aug/2022 15:29:45] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Aug/2022 15:29:49] "[32mGET /post HTTP/1.1[0m" 308 -
+INFO:root:Cтраничка поиска постов запрошена
+INFO:werkzeug:127.0.0.1 - - [26/Aug/2022 15:29:49] "GET /post/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Aug/2022 15:29:49] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Страница с загруженным постом запрошена
+INFO:werkzeug:127.0.0.1 - - [26/Aug/2022 15:30:01] "POST /upload HTTP/1.1" 200 -
+INFO:root:Выгрузка фото запрошена
+INFO:werkzeug:127.0.0.1 - - [26/Aug/2022 15:30:01] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [26/Aug/2022 15:30:01] "GET /uploads/images/photorep_imageid_536945_e7ce46e5cc7b9ef1574401766.jpg HTTP/1.1" 200 -
+INFO:root:Главная страница запрошена
+INFO:werkzeug:127.0.0.1 - - [26/Aug/2022 15:30:03] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Aug/2022 15:30:03] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Страница найденных постов запрошена
+INFO:werkzeug:127.0.0.1 - - [26/Aug/2022 15:30:07] "GET /search?s=илон+маск HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Aug/2022 15:30:07] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Выгрузка фото запрошена
+INFO:werkzeug:127.0.0.1 - - [26/Aug/2022 15:30:07] "[36mGET /uploads/images/photorep_imageid_536945_e7ce46e5cc7b9ef1574401766.jpg HTTP/1.1[0m" 304 -
+INFO:root:Главная страница запрошена
+INFO:werkzeug:127.0.0.1 - - [26/Aug/2022 15:30:09] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [26/Aug/2022 15:30:09] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
